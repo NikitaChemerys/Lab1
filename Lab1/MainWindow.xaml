@@ -1,0 +1,64 @@
+﻿<Window x:Class="Lab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="475" Width="850"
+        FontFamily="Century Gothic"
+        ResizeMode="NoResize">
+
+    <Grid Background="#333333">
+        <TextBox x:Name="textEnter" IsEnabled="False" Visibility="Hidden" FontSize="14" BorderThickness="2" Margin="243,54,244,350"/>
+        <Button Background="#ffaa00" x:Name="showMessage" IsEnabled="False" Visibility="Hidden" Margin="556,54,94,350" FontSize="14" Content="Show message" Cursor="Hand" Click="showMessClick"/>
+        <Button Background="#ffaa00" x:Name="showMess1" IsEnabled="False" Visibility="Hidden" Margin="556,108,94,296" FontSize="14" Content="Default Message 1" Cursor="Hand" Click="showMessClick1"/>
+        <Button Background="#ffaa00" x:Name="showMess2" IsEnabled="False" Visibility="Hidden" Margin="556,158,94,246" FontSize="14" Content="Default Message 2" Cursor="Hand" Click="showMessClick2"/>
+
+        <ComboBox x:Name="comboBox" IsEnabled="False" Visibility="Hidden" Height="30" VerticalAlignment="Top" Margin="243,211,244,0" FontSize="14">
+            <ComboBoxItem Content="Clear field"/>
+            <ComboBoxItem Content="Copy text"/>
+            <ComboBoxItem Content="Paste text"/>
+        </ComboBox>
+
+        <Button Background="#ffaa00" x:Name="doOperation" IsEnabled="False" Visibility="Hidden" Margin="556,211,93,193" FontSize="14" Content="Execute" Cursor="Hand" Click="doOperationClick"/>
+
+        <CheckBox x:Name="enable_Groups" Checked="enableGroupsCheck" Unchecked="enableGroupsUncheck" IsChecked="False" Margin="15,252,654,156">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </CheckBox.LayoutTransform>
+            <TextBlock Text="Enable Groups" Foreground="#ffaa00" FontSize="9" Width="100" Height="12"/>
+        </CheckBox>
+        <Button x:Name="exit" Margin="15,383,715,10"  FontSize="14" Foreground="#ffffff" Background="#ff5555" Content="Exit" Cursor="Hand" Click="exit_Click"/>
+        <StackPanel Margin="15,60,562,290">
+            <TextBlock Text="Show Actions" Foreground="#ffaa00" FontSize="16" Width="222" Height="25"/>
+            <CheckBox x:Name="showM_A" Checked="showMessActCheck" Unchecked="showMessActUncheck" IsChecked="False" Width="148">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </CheckBox.LayoutTransform>
+                <TextBlock Text="Show Message Actions" Foreground="#ffaa00" FontSize="9" Width="100" Height="12"/>
+            </CheckBox>
+            <CheckBox x:Name="showP_A" HorizontalAlignment="Center" Checked="showProgActCheck" Unchecked="showProgActUncheck" IsChecked="False" Width="148" Height="18">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </CheckBox.LayoutTransform>
+                <TextBlock Text="Show Program Actions" Foreground="#ffaa00" FontSize="9" Width="100"/>
+            </CheckBox>
+        </StackPanel>
+        <StackPanel x:Name="stackpActions" Margin="15,135,562,230">
+            <TextBlock Text="Enable Actions" Foreground="#ffaa00" FontSize="16" Width="222" Height="25"/>
+            <CheckBox x:Name="enableM_A" Checked="enableMessActCheck" Unchecked="enableMessActUncheck" IsChecked="False" Width="148">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </CheckBox.LayoutTransform>
+                <TextBlock Text="Enable Message Actions" Foreground="#ffaa00" FontSize="9"/>
+            </CheckBox>
+            <CheckBox x:Name="enableP_A" HorizontalAlignment="Center" Height="19" Checked="enableProgActCheck" Unchecked="enableProgActUncheck" IsChecked="False" Width="148">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                </CheckBox.LayoutTransform>
+                <TextBlock Text="Enable Program Actions" Foreground="#ffaa00" FontSize="9"/>
+            </CheckBox>
+        </StackPanel>
+    </Grid>
+</Window>
